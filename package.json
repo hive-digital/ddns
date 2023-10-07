@@ -1,0 +1,19 @@
+{
+  "name": "@hive-digital/ddns",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist",
+    "start": "bun run ./dist/index.js",
+    "dev": "bun --hot run ./src/index.ts"
+  },
+  "dependencies": {
+    "hono": "^3.5.4"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
