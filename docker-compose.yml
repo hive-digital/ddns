@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  ddns:
+    container_name: ddns
+    build:
+      dockerfile: ./dev-ops/docker/Dockerfile
+      target: dns
+    volumes:
+      - ".:/srv/app"
+    ports:
+      - "3000:3000" # API
+      - "53:53"     # DNS
+    environment:
+      - DEVELOPMENT=true
+      - NAMESERVER_DOMAIN=ns1.example.com
+      - SERVER_DOMAIN=example.com
+      - SERVER_EMAIL=info@example.com
+      - SERVER_IP=192.168.0.10

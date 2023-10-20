@@ -1,0 +1,7 @@
+# IDE files
+.idea
+.vs
+.vscode
+
+# Vendor files
+node_modules

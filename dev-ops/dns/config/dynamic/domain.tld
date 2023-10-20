@@ -1,0 +1,13 @@
+$ORIGIN .
+$TTL 60         ; 60 seconds
+
+$SERVER_DOMAIN. IN SOA $NAMESERVER_DOMAIN. $SERVER_EMAIL. (
+    $DATE       ; serial
+    10800       ; refresh (3 hours)
+    3600        ; retry (1 hour)
+    604800      ; expire (1 week)
+    60          ; minimum (1 minute)
+)
+
+$SERVER_DOMAIN.         IN    NS    $NAMESERVER_DOMAIN
+$NAMESERVER_DOMAIN.     IN    A     $SERVER_IP
